@@ -1,0 +1,158 @@
+html, body, section {
+  height: 100%;
+  overflow: hidden;
+  color: white;
+}
+.btn {
+  display: inline-block;
+  font-size: 4vh;
+  transition: color .4s;
+  cursor: pointer;
+}
+.btn:hover {
+  color: rgba(95, 26, 23,.5)
+}
+/* background */
+.bg {
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  right: -10px;
+  bottom: -10px;
+  z-index: -1;
+  filter: blur(4px);
+  background: url("/image/background1.jpg") center/cover;
+}
+.bg::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,.4)
+}
+/* 播放器左边 */
+.content {
+  height: calc(100% - 24vh);
+  display: flex;
+  padding: 15vh 15vh 5vh 15vh;
+}
+
+.cover figure{
+  display: block;
+  width: 40vh;
+  height: 40vh;
+  background: url('/image/background1.jpg') center/cover;
+}
+.music-control {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 4vh;
+}
+
+/* 播放器右边 */
+.info {
+  flex-grow: 1;
+  display: flex;
+  flex-flow: column nowrap;
+  padding-left: 5vh;
+}
+.head p {
+  display: inline-block;
+  font-size: 2vh;
+  background: rgba(106, 43, 35);
+  padding: .2em .4em;
+  border-radius: .2em;
+}
+.head h2 {
+  font-weight: lighter;
+  font-size: 6vh;
+  margin-top: 4vh;
+}
+.social-btn {
+  margin-top: 5vh;
+}
+.social-btn .btn{
+  font-size: 3vh;
+  margin-right: 8vh;
+}
+.social-btn span.btn>span {
+  margin-left: 1vh;
+}
+.progress {
+  display: flex;
+  align-items: center;
+  margin-top: 13vh;
+}
+.progress-bar {
+  position: relative;
+  flex: 1;
+  height: .8vh;
+  border-radius: 1vh;
+  background: rgba(250,250,250,.5);
+}
+.cur-bar {
+  position: absolute;
+  background: rgba(106, 43, 35);
+  width: 10%;
+  top: 0;
+  left: 0;
+  border-radius: 1vh;
+  height: .8vh;
+}
+.cur-time {
+  width: 5vh;
+  margin-left: 1vh;
+}
+.lyric {
+  margin-top: 2vh;
+  font-size: 2vh;
+}
+/* 歌曲列表 */
+.list-bar {
+  position: relative;
+  height: 24vh;
+  background: rgba(250,250,250,.3);
+  padding: 5vh 15vh;
+  /* box-shadow: 0 -.25vh .25vh .25vh */
+}
+.list-bar >span{
+  position: absolute;
+  top: 10vh;
+  font-size: 6vh;
+  opacity: 0;
+  transition: .4s all;
+  cursor: pointer;
+  color: rgba(250,250,250,.3);
+}
+.list-bar >span:hover {
+  color: rgba(250,250,250,.8);
+}
+.list-bar:hover span.fa{
+  opacity: 1;
+}
+.list-bar>span:first-of-type{
+  left: 5vh;
+}
+.list-bar>span:last-of-type{
+  right: 5vh;
+}
+.list-bar ul{
+  display: flex;
+  justify-content: space-between;
+}
+.item{
+  position: relative;
+  display: inline-block;
+  width: 15vh;
+  height: 15vh;
+  background: center/cover url('/image/background1.jpg');
+}
+.item>p {
+  font-size: 1vh;
+  position: absolute;
+  bottom: -2vh;
+  width: 100%;
+  text-align: center;
+}
