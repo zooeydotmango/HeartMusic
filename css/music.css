@@ -21,7 +21,7 @@ html, body, section {
   bottom: -10px;
   z-index: -1;
   filter: blur(4px);
-  background: url("/image/background1.jpg") center/cover;
+  background: url("../image/background1.jpg") center/cover;
 }
 .bg::after {
   content: '';
@@ -43,7 +43,7 @@ html, body, section {
   display: block;
   width: 40vh;
   height: 40vh;
-  background: url('/image/background1.jpg') center/cover;
+  background: url('../image/background1.jpg') center/cover;
 }
 .music-control {
   display: flex;
@@ -147,7 +147,7 @@ html, body, section {
   display: inline-block;
   width: 15vh;
   height: 15vh;
-  background: center/cover url('/image/background1.jpg');
+  background: center/cover url('../image/background1.jpg');
 }
 .item>p {
   font-size: 1vh;
