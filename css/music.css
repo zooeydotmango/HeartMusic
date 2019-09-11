@@ -67,14 +67,14 @@ html, body, section {
 }
 .head h2 {
   font-weight: lighter;
-  font-size: 6vh;
+  font-size: 3vh;
   margin-top: 4vh;
 }
 .social-btn {
   margin-top: 5vh;
 }
 .social-btn .btn{
-  font-size: 3vh;
+  font-size: 2vh;
   margin-right: 8vh;
 }
 .social-btn span.btn>span {
@@ -100,6 +100,7 @@ html, body, section {
   left: 0;
   border-radius: 1vh;
   height: .8vh;
+  transition: width .8s;
 }
 .cur-time {
   width: 5vh;
