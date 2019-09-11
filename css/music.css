@@ -114,8 +114,7 @@ html, body, section {
   position: relative;
   height: 24vh;
   background: rgba(250,250,250,.3);
-  padding: 5vh 15vh;
-  /* box-shadow: 0 -.25vh .25vh .25vh */
+  padding: 3vh 15vh;
 }
 .list-bar >span{
   position: absolute;
@@ -138,21 +137,40 @@ html, body, section {
 .list-bar>span:last-of-type{
   right: 5vh;
 }
-.list-bar ul{
-  display: flex;
-  justify-content: space-between;
-}
-.item{
+.list-bar .layout {
+  width: 100%;
+  overflow: hidden;
   position: relative;
+  height: 100%;;
+}
+.list-bar ul{
+  position: absolute;
+  left: 0;;
+  height: 18vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.item {
   display: inline-block;
+  margin: 0 3vh;
+  transition: all .4s;
+  /* border: 1px solid rgba(250,250,250,.0); */
+}
+.item>.cover:hover {
+  box-shadow: 0 0 .5vh .5vh  rgba(250,250,250,.6);
+  cursor: pointer;
+}
+.item>.cover{
   width: 15vh;
   height: 15vh;
   background: center/cover url('../image/background1.jpg');
 }
+.item.active>.cover{
+  box-shadow: 0 0 .5vh .5vh rgba(95, 26, 23,.5);
+}
 .item>p {
   font-size: 1vh;
-  position: absolute;
-  bottom: -2vh;
   width: 100%;
   text-align: center;
 }
