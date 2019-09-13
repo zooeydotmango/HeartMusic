@@ -113,6 +113,9 @@ html, body, section {
   margin-top: 2vh;
   font-size: 2vh;
 }
+.lyric div{
+  display: inline-block;
+}
 /* 歌曲列表 */
 .list-bar {
   position: relative;

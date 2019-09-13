@@ -203,14 +203,14 @@ let fm = {
     //歌词
     let line = _this.lyricObj[`0${min}:${sec}`];
     if(line){
-      this.$info.find('.lyric').text(line);
+      this.$info.find('.lyric').text(line)
+      .boomText();
     }
   },
   loadLyric:function(){
     let _this = this;
     $.getJSON('//jirenguapi.applinzi.com/fm/getLyric.php',{sid:_this.song.sid})
     .done(function(ret){
-      console.log(ret.lyric)
       let lyric = ret.lyric;
       let lyricObj = {};
       lyric.split('\n').forEach(function(line){
@@ -226,7 +226,25 @@ let fm = {
     })
   }
 }
-
+$.fn.boomText = function(type){
+  type = type || `rollIn`
+  this.html(function(){
+    let arr = $(this).text().split(``).map(function(word){
+      return `<div>${word}</div>`
+    })
+    return arr.join(``)
+  })
+  let index =0
+  let $boomTexts = $(this).find(`div`)
+  console.log($boomTexts)
+  let clock = setInterval(function(){
+    $boomTexts.eq(index).addClass(`animated ${type}`)
+    index ++
+    if(index >= $boomTexts.length){
+      clearInterval(clock)
+    }
+  },300)
+}
 
 footer.init();
 fm.init();
