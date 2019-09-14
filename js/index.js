@@ -181,7 +181,7 @@ let fm = {
   setMusic:function(){
     console.log(this.song)
     this.audio.src = this.song.url;
-    this.audio.play();
+    // this.audio.play();
     this.$cover.find('.btn-play').removeClass('fa-play').addClass('fa-pause');
     $('.bg').css({
       background: `url(${this.song.picture}) center/cover`
