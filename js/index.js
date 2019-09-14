@@ -250,10 +250,10 @@ $.fn.boomText = function(type){
 fm.init();
 footer.init();
 
-window.onload = function(){
-  console.log('1')
-  $(`.list-bar li:first-of-type`).click();
-}
+// window.onload = function(){
+//   console.log('1')
+//   $(`.list-bar li:first-of-type`).click();
+// }
 
 
 
