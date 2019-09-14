@@ -97,6 +97,8 @@ let footer = {
     .done(function(ret){
       _this.render(ret.channels);
       _this.setStyle();
+      $(`.list-bar li:first-of-type`).click();
+
     })
     .fail(function(){
       console.log('ajax error');
@@ -177,9 +179,9 @@ let fm = {
     })
   },
   setMusic:function(){
-    console.log('set Music...')
     console.log(this.song)
     this.audio.src = this.song.url;
+    this.audio.play();
     this.$cover.find('.btn-play').removeClass('fa-play').addClass('fa-pause');
     $('.bg').css({
       background: `url(${this.song.picture}) center/cover`
@@ -201,6 +203,7 @@ let fm = {
     })
 
     //歌词
+    if(!_this.lyricObj)return
     let line = _this.lyricObj[`0${min}:${sec}`];
     if(line){
       this.$info.find('.lyric').text(line)
@@ -230,13 +233,12 @@ $.fn.boomText = function(type){
   type = type || `rollIn`
   this.html(function(){
     let arr = $(this).text().split(``).map(function(word){
-      return `<div>${word}</div>`
+      return `<span class="boomText">${word}</span>`
     })
     return arr.join(``)
   })
   let index =0
-  let $boomTexts = $(this).find(`div`)
-  console.log($boomTexts)
+  let $boomTexts = $(this).find(`span`)
   let clock = setInterval(function(){
     $boomTexts.eq(index).addClass(`animated ${type}`)
     index ++
@@ -245,9 +247,13 @@ $.fn.boomText = function(type){
     }
   },300)
 }
-
-footer.init();
 fm.init();
+footer.init();
+
+window.onload = function(){
+  console.log('1')
+  $(`.list-bar li:first-of-type`).click();
+}
 
 
 

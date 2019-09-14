@@ -95,7 +95,6 @@ html, body, section {
 .cur-bar {
   position: absolute;
   background: rgba(106, 43, 35);
-  width: 10%;
   top: 0;
   left: 0;
   border-radius: 1vh;
@@ -107,14 +106,16 @@ html, body, section {
   margin-left: 1vh;
 }
 .author {
-  font-size: 1vh;
+  font-size: 2vh;
 }
 .lyric {
   margin-top: 2vh;
-  font-size: 2vh;
+  font-size: 1vh;
+  color: rgba(250,250,250,.5);
 }
-.lyric div{
+.boomText {
   display: inline-block;
+  opacity: 0;
 }
 /* 歌曲列表 */
 .list-bar {
