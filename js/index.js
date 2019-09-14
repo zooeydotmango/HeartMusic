@@ -93,7 +93,7 @@ let footer = {
   },
   getData: function(){
     let _this = this;
-    $.getJSON('http://api.jirengu.com/fm/getChannels.php')
+    $.getJSON('//jirenguapi.applinzi.com/fm/getChannels.php')
     .done(function(ret){
       _this.render(ret.channels);
       _this.setStyle();
