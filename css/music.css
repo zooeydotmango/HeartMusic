@@ -94,6 +94,7 @@ html, body, section {
 }
 .cur-bar {
   position: absolute;
+  width: 0;
   background: rgba(106, 43, 35);
   top: 0;
   left: 0;

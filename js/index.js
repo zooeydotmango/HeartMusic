@@ -168,6 +168,10 @@ let fm = {
       _this.$play_pause.removeClass('fa-pause').addClass('fa-pause');
       clearInterval(_this.statusClock);
     })
+    //当音乐结束，切换下一首
+    _this.audio.addEventListener('ended',function(){
+      _this.loadMusic();
+    })
   },
   loadMusic:function(){
     let _this = this;
