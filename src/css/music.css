@@ -41,6 +41,26 @@ html, body, section {
   display: flex;
   padding: 15vh 15vh 5vh 15vh;
 }
+@media (min-width: 700px) {
+  .content {
+    width: 700px;
+  }
+}
+@media (min-width: 900px) {
+  .content {
+    width: 900px;
+  }
+}
+@media (min-width: 1000px) {
+  .content {
+    width: 1000px;
+  }
+}
+@media (min-width: 1200px) {
+  .content {
+    width: 1200px;
+  }
+}
 .cover figure{
   display: block;
   width: 40vh;
