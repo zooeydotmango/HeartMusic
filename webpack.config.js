@@ -7,7 +7,7 @@ module.exports = {
     output: {
         filename: 'bundle.js',
         path: path.resolve(__dirname, 'dist'),
-        publicPath: "/HeartMusic/dist"
+        publicPath: "/HeartMusic/"
     },
     devtool: 'inline-source-map',
     module: {
