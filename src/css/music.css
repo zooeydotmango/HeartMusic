@@ -3,6 +3,8 @@ html, body, section {
   overflow: hidden;
   color: white;
 }
+
+
 .btn {
   display: inline-block;
   font-size: 4vh;
@@ -21,7 +23,8 @@ html, body, section {
   bottom: -10px;
   z-index: -1;
   filter: blur(4px);
-  background: url("../image/background1.jpg") center/cover;
+  /*background: url("../image/background1.jpg") center/cover;*/
+  background: rgba(38, 38, 38,.55);
 }
 .bg::after {
   content: '';
@@ -38,7 +41,6 @@ html, body, section {
   display: flex;
   padding: 15vh 15vh 5vh 15vh;
 }
-
 .cover figure{
   display: block;
   width: 40vh;
@@ -53,7 +55,7 @@ html, body, section {
 
 /* 播放器右边 */
 .info {
-  flex-grow: 1;
+  /*flex-grow: 1;*/
   display: flex;
   flex-flow: column nowrap;
   padding-left: 5vh;

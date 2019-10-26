@@ -194,9 +194,9 @@ let fm = {
         this.audio.src = this.song.url;
         this.audio.play();
         this.$cover.find('.btn-play').removeClass('fa-play').addClass('fa-pause');
-        $('.bg').css({
-            background: `url(${this.song.picture}) center/cover`
-        });
+        // $('.bg').css({
+        //     background: `url(${this.song.picture}) center/cover`
+        // });
         this.$cover.find('figure').css({
             background: `url(${this.song.picture}) center/cover`
         });
