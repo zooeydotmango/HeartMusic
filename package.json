@@ -1,24 +1,25 @@
 {
   "name": "hm",
   "version": "1.0.0",
-  "description": "[预览地址](https://zooeydotmango.github.io/HungerMusic/index.html)\r # 功能介绍\r 随心FM是一个网页FM，有多种音乐流派可选，选中流派后将随机播放流派中的一首音乐，在页面中可以看到歌手、歌词、专辑封面和音乐进度。点击专辑封面下的爱心按钮可以收藏音乐，点击播放/暂停按钮可暂停/播放当前歌曲，点击下一首可切换到本流派的另一首随机歌曲，当前歌曲播放完毕也会切换到下一首。\r # 细节介绍\r 1. 网页需要做到适应不同设备尺寸，对此本网页使用的是使用vh作为css单位，这样保证了网页撑满高度，并且页面元素对于不同设备能依据一定比例进行缩放，达到比较好的缩放效果。\r 2. 为了能模块化，页面将播放器和音乐流派栏分为两个对象，分别存储需要方法和变量，当用户点击流派时，流派栏会发出事件'select-album'，播放器捕捉这个事件就可以进行后续操作，从而实现两个功能代码解耦。\r 3. 将实现歌词特效的代码封装成一个方法，可以在其他地方也使用这个方法。\r 4. 在刚打开页面时需要让播放器自动播放第一个流派的音乐，使用window.onload并不能实现，因为在window.onload的时候音乐流派向服务器发出的请求未必已经得到响应，因此无从操作后续，在流派发出的请求.done中点击一下第一个流派，就发出'select-album'事件，此时网页早已准备完毕，就可以成功播放第一个流派的歌曲了。\r 5. 在实现播放/暂停按钮的功能后，还是需要对audio添加监听器，因为修改audio的src也会使音乐自动播放，因此我们也需要在audio播放/暂停的时候修改按钮的类，进度条的设置也在这两个监听器中设置。\r 6. 页面使用的https协议的话，如果向http链接申请数据会被服务器认为是危险脚本，更换成兼容链接即可。\r # 项目收获\r 1. 先整理大致的逻辑思路，列出大纲之后细化功能，逻辑方面理顺后写代码就顺畅多了，更多的小功能可以在大功能走通之后慢慢添加。\r 2. 在出bug的时候不仅要考虑js的问题，也要兼顾css的代码，多查看元素的style是否对功能有影响。\r 3. 多关注代码的复用情况，能够整合的就整合在一起，方便后续的复用。\r # 关键字：jQuery、CSS3、响应式、音乐播放器、FM",
+  "description": "[预览地址](https://zooeydotmango.github.io/HeartMusic/index.html)\r # 功能介绍\r 随心FM是一个网页FM，有多种音乐流派可选，选中流派后将随机播放流派中的一首音乐，在页面中可以看到歌手、歌词、专辑封面和音乐进度。点击专辑封面下的爱心按钮可以收藏音乐，点击播放/暂停按钮可暂停/播放当前歌曲，点击下一首可切换到本流派的另一首随机歌曲，当前歌曲播放完毕也会切换到下一首。\r # 细节介绍\r 1. 网页需要做到适应不同设备尺寸，对此本网页使用的是使用vh作为css单位，这样保证了网页撑满高度，并且页面元素对于不同设备能依据一定比例进行缩放，达到比较好的缩放效果。\r 2. 为了能模块化，页面将播放器和音乐流派栏分为两个对象，分别存储需要方法和变量，当用户点击流派时，流派栏会发出事件'select-album'，播放器捕捉这个事件就可以进行后续操作，从而实现两个功能代码解耦。\r 3. 将实现歌词特效的代码封装成一个方法，可以在其他地方也使用这个方法。\r 4. 在刚打开页面时需要让播放器自动播放第一个流派的音乐，使用window.onload并不能实现，因为在window.onload的时候音乐流派向服务器发出的请求未必已经得到响应，因此无从操作后续，在流派发出的请求.done中点击一下第一个流派，就发出'select-album'事件，此时网页早已准备完毕，就可以成功播放第一个流派的歌曲了。\r 5. 在实现播放/暂停按钮的功能后，还是需要对audio添加监听器，因为修改audio的src也会使音乐自动播放，因此我们也需要在audio播放/暂停的时候修改按钮的类，进度条的设置也在这两个监听器中设置。\r 6. 页面使用的https协议的话，如果向http链接申请数据会被服务器认为是危险脚本，更换成兼容链接即可。\r # 项目收获\r 1. 先整理大致的逻辑思路，列出大纲之后细化功能，逻辑方面理顺后写代码就顺畅多了，更多的小功能可以在大功能走通之后慢慢添加。\r 2. 在出bug的时候不仅要考虑js的问题，也要兼顾css的代码，多查看元素的style是否对功能有影响。\r 3. 多关注代码的复用情况，能够整合的就整合在一起，方便后续的复用。\r # 关键字：jQuery、CSS3、响应式、音乐播放器、FM",
   "private": true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack",
-    "watch": "webpack --watch"
+    "watch": "webpack --watch",
+    "deploy": "gh-pages -d dist"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/zooeydotmango/HungerMusic.git"
+    "url": "git+https://github.com/zooeydotmango/HeartMusic.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/zooeydotmango/HungerMusic/issues"
+    "url": "https://github.com/zooeydotmango/HeartMusic/issues"
   },
-  "homepage": "https://github.com/zooeydotmango/HungerMusic#readme",
+  "homepage": "https://github.com/zooeydotmango/HeartMusic#readme",
   "devDependencies": {
     "clean-webpack-plugin": "^3.0.0",
     "css-loader": "^3.2.0",
@@ -29,6 +30,7 @@
     "webpack-cli": "^3.3.9"
   },
   "dependencies": {
+    "gh-pages": "^2.1.1",
     "jquery": "^3.4.1"
   }
 }
