@@ -1,5 +1,5 @@
 # 随心FM
-[预览地址](https://zooeydotmango.github.io/HungerMusic/index.html)
+[预览地址](https://zooeydotmango.github.io/HeartMusic/index.html)
 # 功能介绍
 随心FM是一个网页FM，有多种音乐流派可选，选中流派后将随机播放流派中的一首音乐，在页面中可以看到歌手、歌词、专辑封面和音乐进度。点击专辑封面下的爱心按钮可以收藏音乐，点击播放/暂停按钮可暂停/播放当前歌曲，点击下一首可切换到本流派的另一首随机歌曲，当前歌曲播放完毕也会切换到下一首。
 # 细节介绍
